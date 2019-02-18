@@ -2,11 +2,11 @@ menu:
   Home: /
   Archives: /archives
   About: /about/
-
-weibo: https://www.test.com
-github: https://www.test.com
-linkedin: https://www.test.com
-email: mailto:905980546@qq.com
+#If you dont want it, just comment it out
+weibo: yourweibo
+github: yourgithub
+linkedin: yourlinkedin
+email: mailto:youremail
 
 #Put in /source
-avator: 66.PNG
+avator: avator.jpg
