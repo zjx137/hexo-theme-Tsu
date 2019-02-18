@@ -4,7 +4,7 @@
 ## Installtion
 ```
 $npm install hexo-rederer-scss --save
-$git clone 
+$git clone https://github.com/zjx137/hexo-theme-Tsu.git
 ```
 
 Change config.yml`theme: Tsu`
