@@ -1,0 +1,10 @@
+<% if(is_post()){%>
+    <div class="_toc">
+        <strong class="toc-title">
+        Contents
+        </strong>
+        <div class="toc-content">
+            <%- toc(page.content, {list_number: false}) %>
+        </div>
+    </div>
+<%}%>

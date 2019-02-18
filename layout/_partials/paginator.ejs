@@ -1,0 +1,46 @@
+<% if (page.total>1){ %>
+    <nav class="page-nav">
+    <% if(page.prev){ %>
+        <a class="prev" href="<%- url_for(page.prev_link) %>">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text"><%- __('Paginator.Prev') %></span>
+        </a>
+    <% } %>
+    <% if(page.next){ %>
+        <a class="next" href="<%- url_for(page.next_link) %>">
+            <span class="next-text"><%- __('Paginator.Next') %></span>
+            <i class="iconfont icon-right"></i>
+        </a>
+    <% } %>
+    </nav>
+<% } %>
+<% if (!is_home()) { %>
+    <nav class="post-nav">
+        <% if(page.tags){ %>
+            <div class="page-tags">
+                <% page.tags.forEach(function(tag){ %>
+                    <a href="<%- url_for(tag.path) %>"><%= tag.name%></a>
+                <% }) %>
+            </div>
+        <% } %>
+    </nav>
+
+<% } %>
+<% if (is_post()){ %>
+    <nav class="paginator">
+        <%if(page.prev){%>
+            <a class="prev" href="<%- url_for(page.prev.path) %>">
+                <i class="iconfont icon-left"></i>
+                <span class="prev-text"><%= page.prev.title %></span>
+            </a>
+        <% } %>
+        <%if(page.next){%>
+            <a class="next" href="<%- url_for(page.next.path) %>">
+                
+                <span class="prev-text"><%= page.next.title %></span>
+                <i class="iconfont icon-right"></i>
+            </a>
+        <% } %>
+    </nav>
+
+<%}%>

@@ -1,0 +1,48 @@
+<section class="archive">
+<% if (!page.prev){ %>
+<% if (page.tag){ %>
+  <div class="archive-title tag">
+    <h2 class="archive-name"><%= page.tag %></h2>
+  </div>
+<% if(page.category)%>
+  <div class="archive-title category">
+    <h2 class="archive-name"><%= page.category %></h2>
+  </div>
+<% } %>
+<% } %>
+
+    <div class="post-archive">
+        <% var last; %>
+        <% page.posts.each(function(post){ %>
+            <% var year = date(post.date,"YYYY"); %>           
+                <% if (last !== year){ %>
+                    <% last = year; %>
+                    <% if (last !== null){ %>
+                        <%if(is_archive()){%>
+                        <div class="collect-year">
+                            <h2><%= year %></h2>  
+                        </div>
+                        <%}%>                    
+                    <% } %>
+                    
+                <% }; %>
+                <div class="collect-item">
+                <% if(is_archive()){%>
+                    <div class="time"><%= date(post.date,"MM-DD")%></div>
+                    <a href="<%- url_for(post.path) %>" class="title"><%= post.title %></a>
+                <%};%>
+                <% if(!is_archive()) {%>
+                    <div class="time"><%= date(post.date,"YYYY-MM-DD")%></div>
+                    <a href="<%- url_for(post.path) %>" class="title"><%= post.title %></a>
+                <%};%>
+                </div>
+                
+                
+
+
+        <% }) %>
+
+    </div>
+
+</section>
+<%- partial('_partials/paginator') %>

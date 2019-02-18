@@ -1,0 +1,56 @@
+.post-content {
+      a:hover {
+      background-color: 	#C0C0C0
+      border-radius: 3px
+    }
+    
+    vertical-align: middle;
+    @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: 1.3em;
+      font-weight: 400;
+      margin-top: 1.2em;
+    }
+
+    }
+    h1 {
+        font-size: 2.0em;
+    }
+    .header-link {
+        }
+    blockquote {
+        padding-left: 10px;
+        border-left: 2px solid #6a7c8e;
+        background-color: #F8F8F8; 
+    }
+    img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        position: relative;
+    }
+    > table {
+    max-width: 100%;
+    margin: 10px 0;
+    border-spacing: 0;
+
+    th, td {
+      padding: 5px 15px;
+      border: 1px double $content-table-border-color;
+      text-align: left;
+    }
+  }
+  ul {
+      list-style-type: disc;
+      position: relative;
+      left: 30px;
+      margin: 12px;
+  }
+  ol {
+    position: relative;
+    left: 30px;
+    margin: 12px;
+  }
+
+}

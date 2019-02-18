@@ -1,0 +1,31 @@
+header {
+    display: block;
+    box-shadow: 0 0 1px rgba(0,0,0,0.15);
+    height: 65px;
+    line-height: 65px;
+    font-family: 'Montserrat Light';
+    .title {
+        float: left;
+        position: relative;
+        font-size: 26px;
+}
+    .site-nav {
+        float: right;
+        .menu{
+            display: block;
+            position: relative;
+            padding-left: 0;
+            padding-right: 0px;
+            .menu-item {
+                display: inline-block;
+                margin-right: 15px;
+                font-size: 16px;
+            }}}
+}
+header:before, header:after {
+    content: " ";
+    display: table;
+}
+header:after {
+    clear: both;
+}

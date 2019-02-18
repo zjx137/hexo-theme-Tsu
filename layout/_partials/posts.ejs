@@ -1,0 +1,14 @@
+<div class="posts-wrapper">
+    <% page.posts.each(function(post){ %>
+        <article class="post article-entry">
+            <div class="post-title">
+                <a class="post-title-link text-underline" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            </div>
+            <p class="sub"><%- date(post.date, "MMM DD YYYY") %></p>
+            <div class="post-content">
+                <%- post.content %>
+            </div>
+        </article>
+    <% }) %>
+</div>
+<%- partial('_partials/side-bar') %>

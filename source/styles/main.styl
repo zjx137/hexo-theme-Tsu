@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%}
+a {
+    text-decoration: none;
+    color: #5d88ab;
+}
+*::selection{
+  color white
+  background-color: #34495e;
+}
+
+ul {
+    list-style: none;
+}
+body {
+    color: #34495e;
+    line-height: 2.4;
+    font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+    font-weight: normal;
+    
+}
+.text-underline {
+  display: inline;
+  text-align: center;
+  position: relative;
+}
+.text-underline::after {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  content: "";
+  background-color: #5f84a9;
+  width: 97%;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.text-underline:hover::after {
+  height: 2px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.img_bot {
+  position: fixed;
+  width: 20%;
+  height: 60%;
+  bottom: 0px;
+  right: -2px;}
+
+
+@import "header"
+@import "posts" 
+@import "highlight"
+@import "_variables"
+@import "archive"
+@import "paginator"
+@import "iconfont"
+@import "footer"
+@import "content"
+@import "back-to-top"
+@import "toc"
+  @import "sidebar"
+  @import "tags"

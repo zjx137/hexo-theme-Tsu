@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <%- partial('_partials/head') %>
+    </head>
+    <body>
+        <div class="container">
+            <%- partial('_partials/header') %>
+            <main class="main">
+                <%- body %>
+            </main>
+            <%- partial('_partials/footer') %>
+        </div>
+    <div class="back-to-top" id="back-to-top">
+            <i class="iconfont icon-up"></i>
+    </div>
+        
+    </body>
+    <script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <%- js('js/back-to-top.js') %>
+    <%- js('js/scroll.js') %>
+</html>
