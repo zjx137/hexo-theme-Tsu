@@ -1,5 +1,5 @@
 # hexo-theme-Tsu
-> A light and simple theme bases on polarbear.
+> A light and simple theme bases on polarbear, designed by Bacbin
 
 ## Installtion
 ```
