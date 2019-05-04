@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@font-face
+{
+    font-family: "myFirstFont";
+    src: url('/fonts/Montserrat-Light.otf');
+     //url('Sansation_Light.eot'); /* IE9+ */
+}
 header {
     display: block;
     box-shadow: 0 0 3px rgba(0,0,0,0.15);
@@ -10,13 +16,15 @@ header {
         float: left;
         position: relative;
         font-size: 26px;
-        font-family: 'Montserrat';
+        font-family: "myFirstFont";
 }
     .site-nav {
         float: right;
+        margin-right: -12px;
         .menu{
             display: block;
             position: relative;
+            font-family: "myFirstFont";
             padding-left: 0;
             padding-right: 0px;
             .menu-item {
