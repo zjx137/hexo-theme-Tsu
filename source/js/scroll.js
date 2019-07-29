@@ -61,3 +61,25 @@ $(function(){
         $postswrapper.css("width","100%");
     }
 });
+$(function(){
+    var HEADERFIX = 30;
+    var $toclink = $('.toc-link'),
+    $headerlink = $('.headerlink');
+    $(window).scroll(function(){
+        var headerlinkTop = $.map($headerlink,function(link){
+            return $(link).offset().top;
+        });
+        var scrollTop = $(window).scrollTop();
+        for(var i=0;i<$toclink.length;i++){
+            var isLast = i+1 === $toclink.length,
+            currentTop = headerlinkTop[i] - HEADERFIX,
+            nextTop = isLast ? Infinity : headerlinkTop[i+1]- HEADERFIX;
+            if(currentTop < scrollTop && scrollTop <= nextTop){
+                $($toclink[i]).addClass('active');
+            }
+            else{
+                $($toclink[i]).removeClass('active');
+            }
+        }
+    });
+});
