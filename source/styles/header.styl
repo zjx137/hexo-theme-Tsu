@@ -7,9 +7,8 @@
 }
 header {
     display: block;
-    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
     height: 65px;
-    background: #fafafa
     line-height: 65px;
     font-family: 'Montserrat Light';
     .title {
@@ -40,4 +39,10 @@ header:before, header:after {
 }
 header:after {
     clear: both;
+}
+@media only screen and (max-width: 520px) {
+    .title {
+        display: none
+    }
+
 }
