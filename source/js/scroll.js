@@ -1,6 +1,7 @@
 $(function(){
     var SPACING = 20;
     var $toc = $('._toc');
+    var $ava = $('#avator');
     
     if($toc.length){
         var minScrollTop = $toc.offset().top - SPACING;
@@ -24,7 +25,30 @@ $(function(){
                 $toc.css(tocState.process);
             }
         })
-        
+    }
+
+    if($ava.length) {
+        let minScrollTop = $ava.offset().top - 30;
+        let avaState = {
+            start: {
+                'position':'absolute',
+                'top':minScrollTop
+            },
+            process: {
+                'position':'fixed',
+                'top':SPACING
+            }            
+        }
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            if(scrollTop < minScrollTop) {
+                $ava.css(avaState.start);
+            }
+            else {
+                $ava.css(avaState.process);
+            }
+
+        })
     }
 });
 $(window).resize(function(){
