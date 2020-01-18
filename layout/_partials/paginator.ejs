@@ -27,7 +27,7 @@
 
 <% } %>
 <% if (is_post()){ %>
-    <nav class="paginator">
+    <nav class="paginator clearfix">
         <%if(page.prev){%>
             <a class="prev" href="<%- url_for(page.prev.path) %>">
                 <i class="iconfont icon-left"></i>

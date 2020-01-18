@@ -1,19 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@font-face
+{
+    font-family: "myFirstFont";
+    src: url('/fonts/Montserrat-Light.otf');
+     //url('Sansation_Light.eot'); /* IE9+ */
+}
 header {
-    display: block;
-    box-shadow: 0 0 1px rgba(0,0,0,0.15);
-    height: 65px;
-    line-height: 65px;
-    font-family: 'Montserrat Light';
+    display: block
+    box-shadow: 0 0 3px rgba(0,0,0,0.1)
+    height: 65px
+    margin-top: -5px
+    line-height: 65px
+    font-family: 'Montserrat Light'
     .title {
         float: left;
         position: relative;
         font-size: 26px;
+        font-family: "myFirstFont";
 }
     .site-nav {
         float: right;
+        margin-right: -12px;
         .menu{
             display: block;
+            font-family: "myFirstFont";
             position: relative;
+            font-family: "myFirstFont";
             padding-left: 0;
             padding-right: 0px;
             .menu-item {
@@ -28,4 +40,10 @@ header:before, header:after {
 }
 header:after {
     clear: both;
+}
+@media only screen and (max-width: 520px) {
+    .title {
+        display: none
+    }
+
 }
